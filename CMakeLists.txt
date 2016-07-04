@@ -2,10 +2,12 @@ cmake_minimum_required(VERSION 2.6)
 project(shapeInverter)
 
 SET(MAYA_VERSION 2016 CACHE STRING "Maya version number")
-SET(SOURCE_FILES "src/pluginMain.cpp" "src/shapeInverter.cpp" "src/shapeInverter.h")
+SET(SOURCE_FILES "src/pluginMain.cpp" "src/shapeInverter.cpp" "src/shapeInverter.h" "src/shapeInverterCommand.cpp" "src/shapeInverterCommand.h")
 
 set(CMAKE_MACOSX_RPATH 1)
 FIND_PACKAGE(OpenGL REQUIRED)
+
+set(CMAKE_INSTALL_PREFIX ${CMAKE_CURRENT_BINARY_DIR}/bin)
 
 # OS Specific environment setup
 SET(CUSTOM_DEFINITIONS "REQUIRE_IOSTREAM;_BOOL")
