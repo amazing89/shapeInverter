@@ -22,10 +22,12 @@ int API_VERSION = MGlobal::apiVersion();
 
 MTypeId shapeInverter::typeId(0x80008);
 
-MObject     shapeInverter::aCorrectiveGeo;
-MObject     shapeInverter::aDeformedPoints;
-MObject     shapeInverter::aMatrix;
+MObject         shapeInverter::aCorrectiveGeo;
+MObject         shapeInverter::aDeformedPoints;
+MObject         shapeInverter::aMatrix;
 
+MPointArray     shapeInverter::deformedPoints;
+MMatrixArray    shapeInverter::matrices;
 
 shapeInverter::shapeInverter()
 {
