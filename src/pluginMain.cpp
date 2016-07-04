@@ -18,7 +18,6 @@ MStatus initializePlugin(MObject obj)
                                    shapeInverter::creator,
                                    shapeInverter::initialize,
                                    MPxNode::kDeformerNode);
-
     return status;
 }
 

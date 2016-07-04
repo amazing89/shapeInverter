@@ -9,6 +9,7 @@
 #include <maya/MPxDeformerNode.h>
 #include <maya/MPointArray.h>
 #include <maya/MIntArray.h>
+#include <maya/MMatrixArray.h>
 
 using namespace std;
 
@@ -26,15 +27,12 @@ public:
     static MObject      aCorrectiveGeo;
     static MObject      aDeformedPoints;
     static MTypeId      typeId;
+    static MPointArray  deformedPoints;
+    static MMatrixArray matrices;
 
 private:
     bool                initialized;
     unsigned            elementCount;
-    MPointArray         deformedPoints;
-    MIntArray           bindArray;
-
-
 };
-
 
 #endif
